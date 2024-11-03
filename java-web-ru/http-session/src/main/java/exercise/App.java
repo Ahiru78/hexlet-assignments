@@ -15,7 +15,7 @@ public final class App {
         });
 
         // BEGIN
-        app.get("/users", ctx -> {var g = Data.getUsers());
+        app.get("/users", ctx -> {var g = Data.getUsers())};
         app.post("/users?page=1&per=5", ctx -> ctx.json(g));
         // END
 
