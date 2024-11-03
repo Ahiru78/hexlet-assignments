@@ -15,8 +15,11 @@ public final class App {
         });
 
         // BEGIN
-        app.get("/users", ctx -> {var g = Data.getUsers())};
-        app.post("/users?page=1&per=5", ctx -> ctx.json(g));
+        app.get("/users", ctx -> {
+			ctx.body(Data.getUsers());
+			ctx.queryParamAsClass("page", Integer.class).getOrDefault(1)
+			ctx.queryParamAsClass("per", Integer.class).getOrDefault(5)
+			};
         // END
 
         return app;
