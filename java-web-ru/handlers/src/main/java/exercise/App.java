@@ -8,7 +8,7 @@ public final class App {
 
         // BEGIN
         var app = Javalin.create(config -> {
-            config.bundledPlugins.enableDevLogging();
+			config.bundledPlugins.enableDevLogging();
         });
         app.get("/users", ctx -> ctx.messageAsClass("GET /phones"));
         app.get("/users", ctx -> ctx.messageAsClass("GET /domains"));
