@@ -17,8 +17,8 @@ public final class App {
         // BEGIN
         app.get("/users", ctx -> {
 			ctx.body(Data.getUsers());
-			ctx.queryParamAsClass("page", Integer.class).getOrDefault(1)
-			ctx.queryParamAsClass("per", Integer.class).getOrDefault(5)
+			ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
+			ctx.queryParamAsClass("per", Integer.class).getOrDefault(5);
 			};
         // END
 
