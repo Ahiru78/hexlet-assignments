@@ -19,7 +19,7 @@ public final class App {
 			ctx.body(Data.getUsers());
 			ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
 			ctx.queryParamAsClass("per", Integer.class).getOrDefault(5);
-			};
+			});
         // END
 
         return app;
