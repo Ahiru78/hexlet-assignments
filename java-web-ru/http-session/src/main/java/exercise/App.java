@@ -17,8 +17,8 @@ public final class App {
         // BEGIN
         app.get("/users", ctx -> {
 			ctx.json(Data.getUsers());
-			ctx.queryParam("page").getOrDefault(1);
-			ctx.queryParam("per").getOrDefault(5);
+			ctx.pathParamAsClass("page", Integer.class).getOrDefault(1);
+			ctx.pathParamAsClass("per", Integer.class).getOrDefault(5);
 			});
         // END
 
