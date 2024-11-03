@@ -10,8 +10,8 @@ public final class App {
         var app = Javalin.create(config -> {
 			config.bundledPlugins.enableDevLogging();
         });
-        app.get("/users", ctx -> ctx.messageAsClass("GET /phones"));
-        app.get("/users", ctx -> ctx.messageAsClass("GET /domains"));
+        app.get("/users", ctx -> ctx.json(Data.getPhones()));
+        app.get("/users", ctx -> ctx.json(Data.getDomains()));
 		return app;
         // END
     }
