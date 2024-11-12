@@ -15,3 +15,5 @@ public class PostsPage {
     private int page;
 }
 // END
+
+

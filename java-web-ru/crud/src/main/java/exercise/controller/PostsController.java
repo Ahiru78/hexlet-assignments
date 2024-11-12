@@ -1,4 +1,3 @@
-
 package exercise.controller;
 
 import static io.javalin.rendering.template.TemplateUtil.model;
